@@ -14,7 +14,7 @@ list_in_dict.pop(1)
 
 # 3
 dict_in_dict = my_dict['dict']
-dict_in_dict['i am a tuple'] = False
+dict_in_dict[('i am a tuple',)] = False
 dict_in_dict.pop(5)
 
 # 4
