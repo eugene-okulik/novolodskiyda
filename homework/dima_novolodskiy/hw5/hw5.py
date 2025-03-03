@@ -20,5 +20,3 @@ text = 'Students'
 text2 = 'study these subjects:'
 
 print(text, ', '.join(students), text2, ', '.join(subjects))
-
-
