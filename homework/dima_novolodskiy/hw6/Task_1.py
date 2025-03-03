@@ -5,9 +5,9 @@ text_task = (
 text_list = text_task.split()
 new_text = []
 for word in text_list:
-    if word.endswith(',') :
+    if word.endswith(','):
         new_word = word.replace(',', 'ing,')
-    elif word.endswith('.') :
+    elif word.endswith('.'):
         new_word = word.replace('.', 'ing.')
     else:
         new_word = word + 'ing'
