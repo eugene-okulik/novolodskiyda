@@ -7,9 +7,6 @@ class Flowers:
         self.price = price
         self.stem_length = stem_length
 
-    def __repr__(self):
-        return f"{self.name}({self.color}, {self.lifespan} дней, {self.price} руб, {self.stem_length} см)"
-
 
 class Rose(Flowers):
     def __init__(self, color):
@@ -51,16 +48,10 @@ class Bouquet:
         return round(sum(flower.lifespan for flower in self.bouquet) / len(self.bouquet))
 
     def sorted_bouqoet(self, param):
-        return sorted(getattr(flower, param) for flower in self.bouquet)
+        return sorted(self.bouquet, key=lambda flower: getattr(flower, param))
 
     def find_flower(self, param, value):
-        return ", ".join([str(flower) for flower in self.bouquet if getattr(flower, param) == value])
-
-    def __repr__(self):
-        return f'{self.bouquet}'
-
-    def __str__(self):
-        return f'{self.bouquet}'
+        return [flower for flower in self.bouquet if getattr(flower, param) == value]
 
 
 bouquet_on_8_murch = Bouquet()
