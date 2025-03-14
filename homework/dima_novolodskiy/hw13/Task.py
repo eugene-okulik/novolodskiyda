@@ -2,6 +2,9 @@ import os
 import datetime
 
 
+base_path = os.path.dirname(__file__)
+new_file_path = os.path.join(os.path.dirname(os.path.dirname(base_path)), 'eugene_okulik', 'hw_13', 'data.txt')
+
 def txt_date(path):
     list_date = []
     with open(path) as new_file:
@@ -12,8 +15,7 @@ def txt_date(path):
             list_date.append(date)
     return list_date
 
-base_path = os.path.dirname(__file__)
-new_file_path = os.path.join(os.path.dirname(os.path.dirname(base_path)), 'eugene_okulik', 'hw_13', 'data.txt')
+
 list_date = txt_date(new_file_path)
 
 first_date = list_date[0]
