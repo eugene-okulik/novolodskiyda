@@ -1,9 +1,6 @@
 import os
 import datetime
 
-base_path = os.path.dirname(__file__)
-new_file_path = os.path.join(os.path.dirname(os.path.dirname(base_path)), 'eugene_okulik', 'hw_13', 'data.txt')
-
 
 def txt_date(path):
     list_date = []
@@ -14,7 +11,6 @@ def txt_date(path):
             date = datetime.datetime.strptime(str, "%Y-%m-%d %H:%M:%S.%f")
             list_date.append(date)
     return list_date
-
 
 base_path = os.path.dirname(__file__)
 new_file_path = os.path.join(os.path.dirname(os.path.dirname(base_path)), 'eugene_okulik', 'hw_13', 'data.txt')
