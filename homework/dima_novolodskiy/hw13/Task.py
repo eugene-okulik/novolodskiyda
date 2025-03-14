@@ -27,3 +27,8 @@ print(new_date)
 second_date = list_date[1]
 day_of_week = second_date.strftime('%A')
 print(day_of_week)
+
+third_date = list_date[2]
+current_date = datetime.datetime.now()
+days_difference = (current_date - third_date).days
+print(days_difference)
