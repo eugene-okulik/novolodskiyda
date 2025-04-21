@@ -5,7 +5,7 @@ fake = Faker()
 
 
 def get_objects():
-    response = requests.get(f'http://167.172.172.115:52353/object')
+    response = requests.get('http://167.172.172.115:52353/object')
     assert response.status_code < 300, 'Status code is incorrect'
     assert response.json() != {}, 'Objects not found'
     print("Passed 'get_objects'")
