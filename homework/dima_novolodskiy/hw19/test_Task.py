@@ -11,12 +11,14 @@ def session_scope():
     yield
     print("Testing completed")
 
+
 # Function-scoped fixture for before/after each test
 @pytest.fixture()
 def function_scope():
     print("before test")
     yield
     print("after test")
+
 
 @pytest.fixture()
 def object_for_test():
@@ -35,11 +37,11 @@ def object_for_test():
     requests.delete(f'http://167.172.172.115:52353/object/{object_id}')
 
 
-
 def test_get_objects(session_scope, function_scope):
     response = requests.get('http://167.172.172.115:52353/object')
     assert response.status_code < 300, 'Status code is incorrect'
     assert response.json() != {}, 'Objects not found'
+
 
 def test_get_object_id(object_for_test, function_scope):
     object_id = object_for_test
