@@ -4,6 +4,7 @@ from faker import Faker
 
 fake = Faker()
 
+
 @pytest.fixture()
 def object_for_test():
     body = {
