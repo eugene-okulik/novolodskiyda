@@ -6,7 +6,6 @@ from test_api_project.endpoints.object.base_object import Object
 
 class GetObjectId(Object):
 
-
     @allure.step('Получение объекта по id')
     def get_object_id(self, object_id):
         self.response = requests.get(f'{self.url}/{object_id}')
