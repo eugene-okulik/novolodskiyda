@@ -5,6 +5,7 @@ from test_api_project.endpoints.object.base_object import Object
 
 
 class DeleteObject(Object):
+    object_id = None
 
     @allure.step('Удаление объекта')
     def delete_object_id(self, object_id):
